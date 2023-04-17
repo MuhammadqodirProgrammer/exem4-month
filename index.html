@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./main.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="login-box">
+                <h2 id="title">Shamshodbek yuksalish</h2>
+                <div class="headline">
+                    <p class="order_pr">Buyurtma berish</p>
+                    <button class="admin_btn" type="button">Admin page</button>
+                </div>
+                <form class="login_form">
+                    <div class="user-box">
+                        <input type="text" name="frist_name" required="Iltiomos ismingizni kiriting" title="Ismingizni kiriting">
+                        <label>Ism</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" name="last_name" required="Iltiomos familiya kiriting" title="Familiya kiriting">
+                        <label>Familiya</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="number" name="order_count" required="Iltiomos buyurtma sonini kiriting" title="buyurtma sonini kiriting">
+                        <label>Buyurtma soni</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="tel" name="user_phone" required="Iltiomos Telefon raqamingizni kiriting" title="Telefon raqamingizni kiriting">
+                        <label>Telefon raqam</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" name="user_addres" required="Iltiomos Manzilingizni kiriting" title="Manzilingizni kiriting">
+                        <label>Yashash manzil</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="date" name="order_date" required="Iltiomos Buyurtma berilgan kun kiriting" title="Buyurtma berilgan kun kiriting">
+                        <!-- <label>buyurtma berilgan kun</label> -->
+                    </div>
+                    <div class="btns">
+                        <button href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Jonatish
+                        </button>
+                        <button class="otmen" href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Bekor qilish
+                        </button>
+                    </div>
+   
+                </form>
+            </div>
+          
+        </div>
+        </div>
+<div class="overlay">
+    <div class="wrapper">
+        <div class="modal_head">
+            <button class="js_close"> X </button>
+        </div>
+        <h3 >Admin page</h3>
+        <form class="modal_admin">
+            <div class="user-box">
+                <input type="text" name="admin_name" required="Iltiomos ismingizni kiriting" title="Ismingizni kiriting">
+                <label>Admin ismi</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="admin_parol" required="Iltiomos Parolingizni kiriting" title="Parolingizni kiriting">
+                <label>Admin paroli</label>
+            </div>
+            <button class="admin_btn btn_send">Send</button>
+        </form>
+    </div>
+</div>
+<script src="./main.js"></script>
+    </body>
+
+</html>
