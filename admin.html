@@ -7,20 +7,76 @@
     <title>Document</title>
     <style>
         body{
-            background-color: teal;
-        
+            min-height: 100vh;
+    background: linear-gradient(#141e30, #243b55);
+        background-repeat:  no-repeat;
+        background-size: cover;
         }
         h1{
             text-align: center;
-
+color: white;
         }
-        
+        table, th, td {
+  border: 2px solid #03e9f4;
+  border-collapse: collapse;
+  color: white;
+}
+table{
+    width: 100%;
+}
+.container{
+    margin: 0 auto;
+    max-width: 80%;
+}
+.js_back{
+    margin: 0;
+    border-radius: 10px;
+    padding: 8px 20px;
+    border: 1px solid #03e9f4;
+    background-color: transparent;
+    font-size: 14px;
+    color: #03e9f4;
+    transition: .5s;
+}
+.js_back:hover{
+    background-color: #03e9f4;
+    color: white;
+}
     </style>
 </head>
 <body>
 
     <button class="js_back" onclick="myfunc()">orqaga</button>
     <h1>admin page</h1>
+    <div class="container">
+
+        <table >
+            <tr>
+              <th>Ism familiya</th>
+              <th>Manzil</th>
+              <th>Tell</th>
+              <th>Date</th>
+              <th>Soni</th>
+              <th>Narxi</th>
+            </tr>
+            <tr>
+              <td>1 Valiyev Ali</td>
+              <td> Toshkent</td>
+              <td>+998970071717</td>
+              <td>20/04/2023</td>
+              <td>1000 </td>
+              <td> 5 milion</td>
+            </tr>
+            <tr>
+                <td>2 Valiyev Ali</td>
+                <td> Toshkent</td>
+                <td>+998970010111</td>
+                <td>20/04/2023</td>
+                <td>1000 </td>
+                <td> 5 milion</td>
+            </tr>
+          </table>
+    </div>
     <script>
 
     const elBack =document.querySelector(".js_back")

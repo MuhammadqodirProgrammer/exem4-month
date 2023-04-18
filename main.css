@@ -327,3 +327,16 @@ border-bottom: 1px solid #03e9f4;
   .btn_send:hover{
     color: white;
   }
+
+  .data_input{
+    background-color: white;
+  }
+
+  input[type="date"]::webkit-calendar-picker-indicator {
+    display: none;
+    /* //-webkit-appearance: none; */
+    width: 15px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+}

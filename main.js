@@ -5,7 +5,7 @@ const elWrapper =document.querySelector(".wrapper")
 const elOverlay =document.querySelector(".overlay")
 const elAdminLogin =document.querySelector(".modal_admin")
 const elClose =document.querySelector(".js_close")
-
+const elPhone = document.getElementById("phone")
 elBtnAdmin.addEventListener("click",(evt)=>{
 evt.preventDefault()
 console.log(evt.target);
@@ -25,3 +25,12 @@ elAdminLogin.addEventListener("submit",(evt)=>{
     console.log(evt);
     location.replace("admin.html")
 })
+elPhone.defaultValue ="+998"
+    
+if(elPhone.value > 3 && elPhone.value){
+
+}
+// elPhone.addEventListener("change" , (evt)=>{
+// evt.preventDefault()
+// console.log("sdf");
+// })
