@@ -1,31 +1,4 @@
-//   const users = async ()=>{
-// 	const res =  await fetch("http://95.130.227.84:8075/api/v1/order/get-all")
-// 	const data = await res.json()
-// 	console.log(data);
-//   }
-//   users()
-// http://95.130.227.84:8075/api/v1/order/1
 
-const data = [
-	{
-		id: 1,
-		name: 'vali',
-		location: 'Toshkent',
-		tell: '998777777',
-		date: '20/12/15',
-		order_count: 2000,
-		sum: null,
-	},
-	{
-		id: 2,
-		name: 'Ali',
-		location: 'Mangit',
-		tell: '998777777',
-		date: '20/12/15',
-		order_count: 2000,
-		sum: null,
-	},
-];
 const elBack = document.querySelector('.js_back');
 const accessToken = localStorage.getItem('accessToken');
 const refreshToken = localStorage.getItem('refreshToken');
@@ -67,6 +40,7 @@ async function  myFunc(arr , node = elTable) {
 	});
 }
 // Get all started
+console.log("accessToken:" ,accessToken);
 const getAll =async ()=>{
 const res = await fetch("http://95.130.227.84:8075/api/v1/order/get-all", {
     method: "GET",
