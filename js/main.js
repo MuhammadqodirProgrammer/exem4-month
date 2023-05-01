@@ -75,8 +75,7 @@ document.querySelector(".otmen").addEventListener("click" , (evt)=>{
 
 elAdminLogin.addEventListener("submit" ,(evt)=>{
     evt.preventDefault()
-    console.log(evt);
-    console.log(adminName);
+    
     const adName =adminName.value
     const adPas =adminParol.value
     const adminObj = {
@@ -91,6 +90,7 @@ elAdminLogin.addEventListener("submit" ,(evt)=>{
         },
         body: JSON.stringify(adminObj),
       }).then(res =>res.json()).then((data)=>{
+        console.log('data' ,data);
         if(data.data){
           // turgunboyev791@gmail.com
             if(adName == "turgunboyev791@gmail.com" && adPas =="asad7167"){
@@ -98,7 +98,6 @@ elAdminLogin.addEventListener("submit" ,(evt)=>{
               localStorage.setItem("refreshToken" ,data.data.refreshToken)
                 location.replace("admin.html")
             }
-            console.log(data);
 
         }
     }).catch(err =>console.log(err))
