@@ -32,7 +32,7 @@ async function  myFunc(arr , node = elTable) {
   <td> ${el.orderDate} </td>
   <td>${el.numberOfOrders} </td>
   <td> ${el.numberOfOrders*1000 >= 1000000 ? ` ${el.numberOfOrders*1000/1000000} million`  : ` ${el.numberOfOrders*1000} ming`}</td>
-  <td class="dalete_td" >${el.orderId}ni o'chirish <img class="delete_img" data-Order-id=${el.orderId} src="./img/trash.svg" alt="" width="25" height="40"></td>
+  <td class="dalete_td" >o'chirish <img class="delete_img" data-Order-id=${el.orderId} src="./img/trash.svg" alt="" width="25" height="40"></td>
 
   </tr>
 
@@ -60,7 +60,8 @@ getAll()
 // Get all finished
 
 // REFRESH TOKEN STARTED
-//   http://95.130.227.84:8075/api/v1/auth/refresh-token
+
+
   fetch("http://95.130.227.84:8075/api/v1/auth/refresh-token", {
     method: "GET",
     headers: {
