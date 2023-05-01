@@ -46,6 +46,15 @@ table{
 .js_back:hover{
     background-color: #03e9f4;
     color: white;
+    cursor: pointer;
+}
+.dalete_td{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.dalete_td img{
+    cursor: pointer;
 }
     </style>
 </head>
@@ -54,8 +63,8 @@ table{
     <button class="js_back" >orqaga</button>
     <h1>admin page</h1>
     <div class="container">
-
-        <table >
+   
+        <table class="talbe_body" >
             <tr>
               <th>Ism familiya</th>
               <th>Manzil</th>
@@ -63,6 +72,7 @@ table{
               <th>Date</th>
               <th>Soni</th>
               <th>Narxi</th>
+              <th class="dalete_td">O'chirish</th>
             </tr>
           
           </table>

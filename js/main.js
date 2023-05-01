@@ -26,13 +26,7 @@ const elResClose =document.querySelector(".res_close")
 
 elLoginForm.addEventListener("submit" , (evt)=>{
 evt.preventDefault()
-// {
-//     "address": "string",
-//     "firstName": "string",
-//     "lastName": "string",
-//     "numberOfOrders": 0,
-//     "phoneNumber": "string"
-//   }
+
 const userObj = {
     'address':elAddres.value, 
     'firstName':elName.value, 
@@ -41,14 +35,6 @@ const userObj = {
     'phoneNumber':elPhone.value, 
     "orderDate":elOrderDate.value
  }
-console.log(userObj);
-if(true){
-    elResArea.style.display ="flex"
-    elResAreaBody.innerHTML ="Sizning zakasingiz qabul qilindi 🧐 adminimiz tez orada sz bilan bog'lanadi"
-}else{
-    elResArea.style.display ="flex"
-    elResAreaBody.innerHTML ="Sizning zakasingiz qabul qilinmadi nmadir hato ☹"  
-}
 
 fetch("http://95.130.227.84:8075/api/v1/order/add", {
     method: "POST",
@@ -60,8 +46,31 @@ fetch("http://95.130.227.84:8075/api/v1/order/add", {
   .then((res) =>res.json())
     .then((data) => {
       console.log(data.success);
+        if(data.success){
+          elResArea.style.display ="flex"
+          elResAreaBody.innerHTML ="Sizning zakasingiz qabul qilindi 🧐 adminimiz tez orada sz bilan bog'lanadi"
+      }else{
+          elResArea.style.display ="flex"
+          elResAreaBody.innerHTML ="Sizning zakasingiz qabul qilinmadi nmadir hato ☹"  
+      }
     })
     .catch((err) => console.log(err));
+
+   elAddres.value ="" 
+    elName.value ="" 
+    elLastName.value ="" 
+    elOrderCount.value ="" 
+    elPhone.value ="" 
+    elOrderDate.value =""
+})
+document.querySelector(".otmen").addEventListener("click" , (evt)=>{
+  evt.preventDefault()
+  elAddres.value ="" 
+  elName.value ="" 
+  elLastName.value ="" 
+  elOrderCount.value ="" 
+  elPhone.value ="" 
+  elOrderDate.value =""
 })
 
 elAdminLogin.addEventListener("submit" ,(evt)=>{
@@ -82,8 +91,11 @@ elAdminLogin.addEventListener("submit" ,(evt)=>{
         },
         body: JSON.stringify(adminObj),
       }).then(res =>res.json()).then((data)=>{
-        if(data){
-            if(adName == "Asadbek" && adPas =="Asad7167"){
+        if(data.data){
+          // turgunboyev791@gmail.com
+            if(adName == "turgunboyev791@gmail.com" && adPas =="asad7167"){
+              localStorage.setItem("accessToken" ,data.data.accessToken)
+              localStorage.setItem("refreshToken" ,data.data.refreshToken)
                 location.replace("admin.html")
             }
             console.log(data);
@@ -114,7 +126,5 @@ elResClose.addEventListener("click",(evt)=>{
 
 elPhone.defaultValue ="+998"
     
-if(elPhone.value > 3 && elPhone.value){
 
-}
 

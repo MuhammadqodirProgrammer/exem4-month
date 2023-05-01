@@ -31,6 +31,7 @@
     font-size: 14px;
     color: #03e9f4;
     transition: .5s;
+    cursor: pointer;
 
 }
 .admin_btn:hover{
@@ -39,6 +40,7 @@
     padding: 8px 20px;
     background-color: #03e9f4 !important;
     border: 1px solid #03e9f4;
+    cursor: pointer;
 }
 .order_pr{
     color: gray;
@@ -150,6 +152,8 @@ border-bottom: 1px solid #03e9f4;
                 0 0 25px #03e9f4,
                 0 0 50px #03e9f4,
                 0 0 100px #03e9f4;
+    cursor: pointer;
+
   }
   
   .login-box button span {
@@ -336,9 +340,11 @@ border-bottom: 1px solid #03e9f4;
     font-size: 14px;
     color: #03e9f4;
     transition: .5s;
+
   }
   .btn_send:hover{
     color: white;
+    cursor: pointer;
   }
 
   .data_input{
